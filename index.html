@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Expense Tracker</h1>
+        <p>Manage your money smartly</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Total Income</h3>
+                <p id="income">₹0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="expenses">₹0.00</p>
+            </div>
+
+            <div class="card">
+                <h3>Available Balance</h3>
+                <p id="balance">₹0.00</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add Transaction</h2>
+
+            <form id="transaction-form">
+                <label for="description">Description</label>
+                <input id="description" type="text"
+                       placeholder="e.g. Food or Scholarship" required>
+
+                <label for="amount">Amount (₹)</label>
+                <input id="amount" type="number"
+                       min="0.01" step="0.01"
+                       placeholder="Enter amount" required>
+
+                <label for="type">Transaction Type</label>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <label for="category">Category</label>
+                <select id="category">
+                    <option>Education</option>
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Shopping</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Transaction History</h2>
+            <ul id="transaction-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Expense Tracker | CI/CD Mini Project</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
